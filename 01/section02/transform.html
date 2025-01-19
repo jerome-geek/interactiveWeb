@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Transform & Transition</title>
+        <!-- <link rel="stylesheet" href="css/reset.css" /> -->
+        <style>
+            .box-container {
+                display: flex;
+            }
+            .box {
+                width: 100px;
+                height: 100px;
+                border: 2px solid black;
+                background: rgba(255, 255, 0, 0.7);
+                /* transition은 값이 숫자로 표현된 속성이 변화가 있을 때 그 중간과정을 애니메이션으로 만들어준다. 
+                e.g.) width: auto;일 경우 숫자가 아니기 때문에 동작X, auto는 내 컨텐츠의 폭만큼 알아서 늘어나게 해주는 값 */
+                transition: 2s;
+            }
+            .box:hover {
+                /* width, height를 사용했을 경우 다른 element를 밀어낸다 */
+                /* width: 200px;
+                height: 200px; */
+                /* transform은 다른 element에 영향을 주지 않는다 -> 연산이 적어지고 성능이 더 좋다 */
+                /* transform: scale(1.2) rotate(45deg); */
+                /* transform: skewY(-30deg); */
+                /* transform: translate(30px, 10px); */
+                /* transform: translateY(-30px); */
+                /* transform: scale(1.5); */
+                /* transform: rotate(30deg); */
+                /* transform-origin: transform의 기준점, 기본값은 중앙 */
+                /* transform-origin: right bottom; */
+                /* transform-origin: 50% 50%; */
+                /* transform: scale(2); */
+                width: 200px;
+                background: red;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>CSS Transform</h1>
+        <!-- // 하드웨어 가속을 이용해서 성능이 좋다 (=GPU 사용) -->
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. A magnam
+            aliquam eos reprehenderit dignissimos quaerat facilis consectetur ut
+            nemo architecto nihil repudiandae veritatis cum maiores quasi
+            numquam sunt iste, quod, voluptatibus fugit. Autem omnis eius eum,
+            officia tempora fuga deserunt optio consectetur repellat saepe
+            sapiente, animi ducimus et dolorem blanditiis corporis. Totam, esse
+            quidem assumenda laborum eligendi cupiditate porro repellendus nemo
+            nobis exercitationem delectus quae nulla quia neque, dolorum
+            laudantium quod deserunt aspernatur! Blanditiis odit, consectetur
+            magnam quasi dolores natus iure laboriosam maiores distinctio quod
+            modi at, aliquid asperiores, omnis eveniet velit iste quas? Eum
+            dolore exercitationem officia corporis vitae.
+        </p>
+        <div class="box-container">
+            <div class="box">A</div>
+            <div class="box">B</div>
+            <div class="box">C</div>
+            <div class="box">D</div>
+            <div class="box">E</div>
+        </div>
+        <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            Temporibus, delectus, inventore dolorum aperiam dolore non, omnis
+            dignissimos aspernatur minima libero iusto cumque unde hic autem
+            fugiat doloribus. Non, in fuga? Blanditiis, doloremque? Ad
+            reprehenderit sapiente pariatur rerum nihil et corporis earum eius
+            doloribus porro dignissimos, eum dolorum maxime, enim cum! Minus
+            omnis qui ut illo aspernatur similique itaque iusto, laudantium
+            doloremque consequatur sed eveniet, sunt animi a repellat officiis
+            expedita! Non quam necessitatibus sequi, laudantium sed nisi,
+            deleniti voluptatum harum quod nesciunt laborum sapiente, quae error
+            eveniet et asperiores tempore ut aliquid quisquam officiis qui
+            delectus? Ad animi numquam vero?
+        </p>
+    </body>
+</html>

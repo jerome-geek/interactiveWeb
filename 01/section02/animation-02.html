@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Animation - sprite</title>
+        <style>
+            body {
+                background: #222;
+            }
+            @keyframes spaceship-ani {
+                /* from은 0%와 같다 */
+                /** 기존 CSS와 시작점이 동일할 경우에는 생략 가능 */
+                from {
+                }
+                /* to는 100%와 같다 */
+                to {
+                    background-position: -2550px 0;
+                }
+            }
+            .spaceship {
+                width: 150px;
+                height: 150px;
+                /* 고해상도의 이미지를 표현하기 위해 이미지 크기의 반만 표현해준다 */
+                /* background size는 '/'로 구분 */
+                /* width, height를 빠르게 계산하려면 쉬운 쪽을 먼저 선언 후 나머지는 auto로 맞춰주면 된다. */
+                /* e.g.) height를  150px로 맞춘 후 width를 알아서 맞춰주라는 뜻 (굳이 5100/2를 할 필요 X) */
+                background: url('images/sprite_spaceship.png') no-repeat 0 0 /
+                    auto 150px;
+
+                /* 
+                    gif대신 sprite이미지와 css를 사용하여 처리하는 이유
+                    1. gif는 투명도가 표현되지 않으므로 이미지가 깨져보일 수 있지만, 
+                    png를 사용하면 투명한 배경도 깨지지 않게 표현 가능 
+                    2. gif와 다르게 코드로 애니메이션 제어 가능
+                */
+                animation: spaceship-ani 1s infinite steps(17);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="spaceship"></div>
+    </body>
+</html>
